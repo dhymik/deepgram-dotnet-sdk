@@ -45,7 +45,7 @@ namespace Deepgram.Models
             {
                 var start = SecondsToTimestamp(utterance.Start);
                 var end = SecondsToTimestamp(utterance.End);
-                webVTT += $"{index}\n{start} --> {end}\n - {utterance.Transcript}\n\n";
+                webVTT += $"{index}\n{start} --> {end}\n{utterance.Transcript}\n\n";
                 index++;
             }
 
@@ -68,7 +68,7 @@ namespace Deepgram.Models
             {
                 var start = SecondsToTimestamp(utterance.Start);
                 var end = SecondsToTimestamp(utterance.End);
-                srt += $"{index}\n{start} --> {end}\n - {utterance.Transcript}\n\n";
+                srt += $"{index}\n{start} --> {end}\n{utterance.Transcript}\n\n";
                 index++;
             }
 
